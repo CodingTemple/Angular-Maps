@@ -18,8 +18,8 @@ export class MapsService {
     mac_address:"98:fe:94:4a:98:3c"
   }
   getLocation() {
-    const headers = new HttpHeaders().set('Authorization', 'AIzaSyA1qBZfxHHZG4HxoKMg4JSkbkDk6puRuWQ');
-    return this.http.post<Location>('https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyA1qBZfxHHZG4HxoKMg4JSkbkDk6puRuWQ',this.data, { headers }).subscribe((data) => {
+    const headers = new HttpHeaders().set('Authorization', 'API KEY');
+    return this.http.post<Location>('https://www.googleapis.com/geolocation/v1/geolocate?key=API KEY',this.data, { headers }).subscribe((data) => {
       console.log(data);
       return data
     })
