@@ -19,10 +19,7 @@ export class MapsService {
   }
   getLocation() {
     const headers = new HttpHeaders().set('Authorization', 'API KEY');
-    return this.http.post<Location>('https://www.googleapis.com/geolocation/v1/geolocate?key=API KEY',this.data, { headers }).subscribe((data) => {
-      console.log(data);
-      return data
-    })
+    return this.http.post<Location>('https://www.googleapis.com/geolocation/v1/geolocate?key=API KEY',this.data, { headers })
   }
 
 }

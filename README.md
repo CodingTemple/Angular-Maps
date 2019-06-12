@@ -25,3 +25,9 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+----
+Changes Made by Joel
+- Files Changed:
+    - `map.service.ts`: Line 22 - Removed `.subscribe()` from the service so that the call made by the post only sends out the call but doesn't subscribe. 
+    - `app.component.ts`: Changed `lat` and `lng` to numbers and added the `subscribe()` to the `map` service call so that the data would be available **inside** the component. This then allows us to add the data to the `lat`, `lng` variables. **Lines Added** Lines: 18 - 19 

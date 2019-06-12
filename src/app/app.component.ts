@@ -6,14 +6,17 @@ import { MapsService } from './maps.service'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  lat:string = '';
-  lng:string = '';
+  lat:number;
+  lng:number;
 
   locatin:Object;
 
   constructor(private map:MapsService){}
 
   ngOnInit() {
-    console.log(this.map.getLocation());
+    this.map.getLocation().subscribe(data => {
+      this.lat = data['location']['lat']
+      this.lng = data['location']['lng']
+    });
   }
 }
